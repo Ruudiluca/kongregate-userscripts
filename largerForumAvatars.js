@@ -2,9 +2,9 @@
 // @name        Kongregate Forums: Larger Avatars
 // @namespace   ruudiluca.com
 // @author      Ruudiluca
-// @include     http://www.kongregate.com/forums/*/topics/*
-// @include     http://www.kongregate.com/posts*
-// @include     http://www.kongregate.com/users/*/posts*
+// @include     *://www.kongregate.com/forums/*/topics/*
+// @include     *://www.kongregate.com/posts*
+// @include     *://www.kongregate.com/users/*/posts*
 // @version     1
 // @grant       none
 // ==/UserScript==
