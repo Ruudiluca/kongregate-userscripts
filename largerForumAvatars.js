@@ -19,5 +19,5 @@ head.appendChild(aStyle);
 //Replace avatar image with non-pixelated version
 var aImgs = document.getElementsByClassName("hover_profile");
 for(var i = 0; i < aImgs.length; i++){
-  aImgs[i].innerHTML = aImgs[i].innerHTML.replace("40x40", "140x140");
+  aImgs[i].innerHTML = aImgs[i].innerHTML.replace("width:40", "width:140");
 }
