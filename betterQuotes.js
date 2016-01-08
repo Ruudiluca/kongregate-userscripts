@@ -60,12 +60,12 @@ for(let i of quotes){
     
     //Insert fake quote
     var fQ = document.createElement("blockquote");
-    fQ.id = "fakeQuote";
-    fQ.innerHTML = "[A quote...]";
+    fQ.className = "fakeQuote";
+    fQ.innerHTML = "[quote]";
     $(fQ).css("margin", "5px 0px 5px 0px");
     
     var hQ = $(i).find("blockquote");
-    $(hQ).attr("id", "hiddenQuote");
+    $(hQ).attr("class", "hiddenQuote");
     $(hQ).css("display", "none");
     $(hQ).before(fQ);
     
@@ -87,8 +87,8 @@ $(".expandQuote").click(function(){
     $(this).data('state', true);
     
     //toggle quotes
-    dQ.find("#fakeQuote").css("display", "none");
-    dQ.find("#hiddenQuote").css("display", "inherit");
+    dQ.find(".fakeQuote").css("display", "none");
+    dQ.find(".hiddenQuote").css("display", "inherit");
     
     //toggle size
     $(dQ).css("height", "auto");
@@ -99,8 +99,8 @@ $(".expandQuote").click(function(){
     $(this).data('state', false);
     
     //toggle quotes
-    dQ.find("#fakeQuote").css("display", "inherit");
-    dQ.find("#hiddenQuote").css("display", "none");
+    dQ.find(".fakeQuote").css("display", "inherit");
+    dQ.find(".hiddenQuote").css("display", "none");
     
     //toggle size
     $(dQ).css("height", dQ[0].scrollHeight + "px");
