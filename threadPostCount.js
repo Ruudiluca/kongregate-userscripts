@@ -10,7 +10,12 @@
 var a = document.getElementsByClassName("updated");
 for(var i = 1; i < a.length + 1; i++){
   //Get post number
-  var cP = document.getElementsByClassName("current")[0].innerHTML;
+  var cP = document.getElementsByClassName("current");
+  if(cP.length > 0){
+    var cP = cP[0].innerHTML;
+  }
+  else cP = 1;
+  
   var n;
   if(cP > 1){
     n = ((cP - 1)*25)+i;
