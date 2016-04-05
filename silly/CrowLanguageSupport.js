@@ -3,6 +3,7 @@
 // @namespace   ruudiluca.com
 // @description Implements a crow language on Kongregate
 // @include     *www.kongregate.com*
+// @exclude     *www.kongregate.com/games/*/*
 // @version     1
 // @grant       none
 // ==/UserScript==
