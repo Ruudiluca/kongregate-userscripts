@@ -24,5 +24,5 @@ for(var i = 0; i < aImgs.length; i++){
   aImgs[i].innerHTML = aImgs[i].innerHTML.replace("width:40", "width:140");
 }
 
-GM_addStyle(".post .author {width: 240px; #feature {width: 932px;}}");
+GM_addStyle(".post .author {width: 260px; #feature {width: 952px;}}");
 
