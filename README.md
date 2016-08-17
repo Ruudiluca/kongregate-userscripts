@@ -9,6 +9,10 @@ http://www.kongregate.com/accounts/Ruudiluca
 
 Shrink down quotes, makes forum pages less spam-filled.
 
+#### [Hide Developer Navigation Button](https://github.com/Ruudiluca/kongregate-userscripts/blob/master/hideDevNav.js)
+
+Hides the "DEV" navigation button in the Kongregate header.
+
 #### [Larger Forum Avatars](https://github.com/Ruudiluca/kongregate-userscripts/blob/master/largerForumAvatars.js)
 
 Increase the size of user avatars on the forums. This makes them clearer.
