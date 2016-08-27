@@ -6,7 +6,7 @@
 // @include     *.kongregate.com/posts
 // @include     *.kongregate.com/users/posts/*
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @version     1
+// @version     1.1
 // @grant       GM_addStyle
 // ==/UserScript==
 
@@ -40,14 +40,17 @@ display: block;\
 }                                             \
 ");
 
-//Begin script
+GM_addStyle(".forum--entry blockquote { margin: 0px; }"); //Fixes Kongregate's dodgy quote padding.
 
-var quotes = document.querySelectorAll(".entry-content > blockquote");
+//Begin script
+var quoteTotal = 0;
+function addBetterQuotes(){
+var quotes = document.querySelectorAll(".rendered_post > blockquote");
 
 for(let i of quotes){
   //Create the button
   if($(i).height() > 205){
-      
+      quoteTotal++;
       var qB = document.createElement("div");
       qB.innerHTML = "Read more...";
       qB.className = "expandQuote";
@@ -107,3 +110,14 @@ $(".expandQuote").click(function(){
     if($(dQ).height() > 200) {$(dQ).css("height", "200px");}
   }
 });
+}
+
+var loadCheck = setInterval(function(){
+  console.log("Running. Total: " + quoteTotal);
+  if (document.getElementsByClassName('rendered_post').length > 0) {
+    addBetterQuotes();
+  }
+  if(quoteTotal > 0){
+    clearInterval(loadCheck);
+  }
+}, 100);
