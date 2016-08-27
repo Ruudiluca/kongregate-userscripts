@@ -113,7 +113,6 @@ $(".expandQuote").click(function(){
 }
 
 var loadCheck = setInterval(function(){
-  console.log("Running. Total: " + quoteTotal);
   if (document.getElementsByClassName('rendered_post').length > 0) {
     addBetterQuotes();
   }
